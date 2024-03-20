@@ -9,7 +9,9 @@
         </div>
     </div>
 
-    <div class="hidden lg:flex w-[650px] h-screen flex flex-col px-12">
-        <div class="flex flex-col justify-center h-full"><LoginForm /></div>
+    <div class="hidden lg:flex w-[500px] h-screen flex flex-col">
+        <div class="flex flex-col justify-center h-full px-12">
+            <LoginForm />
+        </div>
     </div>
 </template>

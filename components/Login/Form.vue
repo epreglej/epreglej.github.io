@@ -3,9 +3,14 @@ import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import * as z from "zod";
 
+const client = useSupabaseClient();
+
+const authenticationErrorMessage = ref("");
+
 const formSchema = toTypedSchema(
     z.object({
-        username: z.string().min(2).max(50),
+        email: z.string().email().max(30),
+        password: z.string().min(8),
     }),
 );
 
@@ -13,25 +18,41 @@ const form = useForm({
     validationSchema: formSchema,
 });
 
-const onSubmit = form.handleSubmit((values) => {
-    console.log("Form submitted!", values);
+const onSubmit = form.handleSubmit(async (values) => {
+    try {
+        const { data, error } = await client.auth.signInWithPassword({
+            email: values.email,
+            password: values.password,
+        });
+
+        if (error) {
+            console.error("Login error!");
+            authenticationErrorMessage.value = error.message;
+        } else {
+            console.log("Login successful!");
+            await navigateTo("/admin");
+        }
+    } catch (error) {
+        console.error("Unexpected error:", error);
+        authenticationErrorMessage.value = error.message;
+    }
 });
 </script>
 
 <template>
     <header
-        class="flex items-center justify-center -mb-8 gap-2 p-4 hover:scale-[101%] transition cursor-pointer"
+        class="flex items-center justify-center -mb-8 gap-2 py-4 hover:scale-[101%] transition cursor-pointer"
     >
         <p class="text-[32px] font-bold">comfy.vr</p>
     </header>
     <main>
-        <form class="px-6 py-8" @submit="onSubmit">
+        <form class="px-6 py-8" @submit.prevent="onSubmit">
             <FormField v-slot="{ componentField }" name="email">
                 <FormItem class="pb-4">
                     <FormLabel>E-mail</FormLabel>
                     <FormControl>
                         <Input
-                            type="text"
+                            type="email"
                             placeholder="Enter your e-mail"
                             v-bind="componentField"
                         />
@@ -52,12 +73,20 @@ const onSubmit = form.handleSubmit((values) => {
                     <FormMessage />
                 </FormItem>
             </FormField>
+            <div class="flex justify-center">
+                <Label class="text-red-600">{{
+                    authenticationErrorMessage
+                }}</Label>
+            </div>
             <div class="flex justify-center pt-4">
                 <Button class="w-full" type="submit"> Log in </Button>
             </div>
+            <div class="flex justify-center pt-4">
+                <Label
+                    >By logging in you accept
+                    <span class="underline">Terms & Conditions</span>
+                </Label>
+            </div>
         </form>
     </main>
-    <footer class="pb-2">
-        <div class="text-center">Terms of service</div>
-    </footer>
 </template>
