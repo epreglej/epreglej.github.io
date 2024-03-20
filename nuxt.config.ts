@@ -1,9 +1,10 @@
 export default defineNuxtConfig({
   modules: [
+    "shadcn-nuxt",
     "nuxt-icon",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/supabase",
-    "shadcn-nuxt",
+    "@pinia/nuxt",
   ],
   shadcn: {
     prefix: "",
