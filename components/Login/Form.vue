@@ -3,8 +3,6 @@ import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import * as z from "zod";
 
-import { useLoginFormStore } from "../stores/loginFormStore";
-
 const client = useSupabaseClient();
 
 const authenticationErrorMessage = ref("");
@@ -39,16 +37,6 @@ const onSubmit = form.handleSubmit(async (values) => {
         authenticationErrorMessage.value = error.message;
     }
 });
-
-const loginFormStore = useLoginFormStore();
-
-const handleEmailInput = (newValue) => {
-    loginFormStore.setEmail(newValue);
-};
-
-const handlePasswordInput = (newValue) => {
-    loginFormStore.setPassword(newValue);
-};
 </script>
 
 <template>
@@ -67,8 +55,6 @@ const handlePasswordInput = (newValue) => {
                             type="email"
                             placeholder="Enter your e-mail"
                             v-bind="componentField"
-                            v-model="loginFormStore.email"
-                            @input="handleEmailInput($event.target.value)"
                         />
                     </FormControl>
                     <FormMessage />
@@ -82,8 +68,6 @@ const handlePasswordInput = (newValue) => {
                             type="password"
                             placeholder="Enter your password"
                             v-bind="componentField"
-                            v-model="loginFormStore.password"
-                            @input="handlePasswordInput($event.target.value)"
                         />
                     </FormControl>
                     <FormMessage />
