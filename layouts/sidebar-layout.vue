@@ -1,13 +1,17 @@
+<script setup></script>
 <template>
-    <ResizablePanelGroup direction="horizontal">
-        <ResizablePanel class="h-screen" :default-size="17">
-            <SidebarMenu />
-        </ResizablePanel>
-        <div
-            class="inline-block min-h-[1em] w-0.5 self-stretch bg-neutral-100 dark:bg-white"
-        />
-        <ResizablePanel :default-size="83">
+    <header>
+        <Sheet>
+            <SheetTrigger as-child>
+                <Icon name="radix-icons:hamburger-menu" size="40" />
+            </SheetTrigger>
+            <SheetContent class="w-[300px]">
+                <Sidebar />
+                <SheetClose />
+            </SheetContent>
+        </Sheet>
+        <div>
             <slot />
-        </ResizablePanel>
-    </ResizablePanelGroup>
+        </div>
+    </header>
 </template>

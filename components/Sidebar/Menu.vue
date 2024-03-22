@@ -21,7 +21,7 @@ const items = ref([
 
 <template>
     <header
-        class="flex items-center gap-2 py-4 px-6 hover:scale-[101%] transition cursor-pointer"
+        class="flex items-center gap-2 pb-4 px-6 hover:scale-[101%] transition cursor-pointer"
     >
         <!-- <Logo class="w-10" /> -->
         <p class="text-[32px] font-bold">comfy.vr</p>

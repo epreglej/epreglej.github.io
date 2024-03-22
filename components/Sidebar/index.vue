@@ -27,10 +27,11 @@ const open = ref(true);
             </div>
         </div> -->
 
-        <div
+        <!-- <div
             class="hidden lg:flex w-[250px] h-screen flex flex-col justify-between border-r"
         >
             <SidebarMenu />
-        </div>
+        </div> -->
+        <SidebarMenu />
     </div>
 </template>

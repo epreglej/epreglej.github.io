@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/supabase",
     "@pinia/nuxt",
+    "@vueuse/nuxt",
   ],
   shadcn: {
     prefix: "",

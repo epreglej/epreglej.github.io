@@ -1,13 +1,24 @@
-<script setup>
-definePageMeta({
-    layout: "authentication-layout",
-});
-</script>
-
 <template>
     <div
-        class="h-screen w-full bg-gradient-to-r from-blue-400 via-blue-200 to-neutral-0"
+        class="flex place-items-center h-screen w-full bg-gradient-to-r from-blue-400 via-blue-150 to-neutral-0 lg:bg-none"
     >
-        Hi from login.vue!
+        <div
+            class="hidden lg:flex lg:h-screen lg:flex-grow lg:bg-gradient-to-r lg:from-blue-400 lg:via-blue-200 lg:to-neutral-0"
+        >
+            <div class="container grid m-auto text-white">
+                <p>
+                    <span class="text-4xl block pb-6">For your comfort</span>
+                    <span class="text-3xl block pl-52 pb-6">safety</span>
+                    <span class="text-3xl block pl-64">accessibility</span>
+                </p>
+            </div>
+        </div>
+        <div class="w-[360px] container p-0 lg:mr-4">
+            <div
+                class="container z-50 bg-white grid rounded-2xl shadow-2xl lg:shadow-none"
+            >
+                <LoginForm />
+            </div>
+        </div>
     </div>
 </template>

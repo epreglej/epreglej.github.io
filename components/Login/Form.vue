@@ -41,12 +41,12 @@ const onSubmit = form.handleSubmit(async (values) => {
 
 <template>
     <header
-        class="flex items-center justify-center -mb-8 gap-2 py-4 hover:scale-[101%] transition cursor-pointer"
+        class="flex items-center justify-center -mb-8 gap-2 pt-4 pb-8 hover:scale-[101%] transition cursor-pointer"
     >
         <p class="text-[32px] font-bold">comfy.vr</p>
     </header>
     <main>
-        <form class="px-6 py-8" @submit.prevent="onSubmit">
+        <form class="py-4" @submit.prevent="onSubmit">
             <FormField v-slot="{ componentField }" name="email">
                 <FormItem class="pb-4">
                     <FormLabel>E-mail</FormLabel>
@@ -81,9 +81,9 @@ const onSubmit = form.handleSubmit(async (values) => {
             <div class="flex justify-center pt-4">
                 <Button class="w-full" type="submit"> Log in </Button>
             </div>
-            <div class="flex justify-center pt-4">
-                <Label
-                    >By logging in you accept
+            <div class="flex justify-center pt-4 pb-2">
+                <Label class="text-xs"
+                    >By logging in you accept our
                     <span class="underline">Terms & Conditions</span>
                 </Label>
             </div>
