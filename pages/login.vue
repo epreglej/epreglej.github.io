@@ -3,7 +3,7 @@
         class="flex place-items-center h-screen w-full bg-gradient-to-r from-blue-400 via-blue-150 to-neutral-0 lg:bg-none"
     >
         <div
-            class="hidden lg:flex lg:h-screen lg:flex-grow lg:bg-gradient-to-r lg:from-blue-400 lg:via-blue-200 lg:to-neutral-0"
+            class="hidden lg:flex lg:h-screen lg:flex-grow lg:bg-gradient-to-r lg:from-blue-400 lg:via-blue-200 lg:to-white"
         >
             <div class="container grid m-auto text-white">
                 <p>
@@ -13,7 +13,9 @@
                 </p>
             </div>
         </div>
-        <div class="w-[360px] container p-0 lg:mr-4">
+        <div
+            class="w-[340px] container -mt-16 p-0 lg:mt-0 lg:mr-4 lg:w-[380px]"
+        >
             <div
                 class="container z-50 bg-white grid rounded-2xl shadow-2xl lg:shadow-none"
             >

@@ -83,7 +83,7 @@ const onSubmit = form.handleSubmit(async (values) => {
             </div>
             <div class="flex justify-center pt-4 pb-2">
                 <Label class="text-xs"
-                    >By logging in you accept our
+                    >By logging in you accept
                     <span class="underline">Terms & Conditions</span>
                 </Label>
             </div>

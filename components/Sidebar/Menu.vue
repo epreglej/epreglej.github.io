@@ -21,12 +21,11 @@ const items = ref([
 
 <template>
     <header
-        class="flex items-center gap-2 pb-4 px-6 hover:scale-[101%] transition cursor-pointer"
+        class="flex items-center gap-2 pb-4 px-4 hover:scale-[101%] transition cursor-pointer"
     >
-        <!-- <Logo class="w-10" /> -->
         <p class="text-[32px] font-bold">comfy.vr</p>
     </header>
-    <div class="px-4 grow">
+    <div class="px-2 grow">
         <div class="grid gap-2">
             <NuxtLink
                 :to="item.path"
@@ -41,7 +40,7 @@ const items = ref([
     </div>
     <footer class="py-2">
         <hr class="pb-2" />
-        <div class="px-4 grow">
+        <div class="px-2 grow">
             <div class="grid gap-2">
                 <NuxtLink
                     v-if="user"
