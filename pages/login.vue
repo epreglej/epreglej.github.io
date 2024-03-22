@@ -13,9 +13,7 @@
                 </p>
             </div>
         </div>
-        <div
-            class="w-[340px] container -mt-16 p-0 lg:mt-0 lg:mr-4 lg:w-[380px]"
-        >
+        <div class="w-[340px] container -mt-8 p-0 lg:mt-0 lg:mr-4 lg:w-[380px]">
             <div
                 class="container z-50 bg-white grid rounded-2xl shadow-2xl lg:shadow-none"
             >

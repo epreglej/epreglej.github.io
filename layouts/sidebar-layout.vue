@@ -1,11 +1,11 @@
 <script setup></script>
 <template>
     <div class="lg:hidden">
-        <header class="flex h-[48px]">
-            <div class="w-full bg-blue-200 flex">
-                <span class="text-[32px]">Overview</span>
+        <header class="flex h-[48px] bg-slate-100 pb-8 border-b-2">
+            <div class="w-full flex pl-4">
+                <span class="text-[32px] font-bold">overview</span>
             </div>
-            <div class="">
+            <div>
                 <Sheet>
                     <SheetTrigger as-child>
                         <div class="lg:hidden">
@@ -15,7 +15,7 @@
                             />
                         </div>
                     </SheetTrigger>
-                    <SheetContent class="w-[300px]">
+                    <SheetContent class="w-[300px] p-0">
                         <Sidebar />
                         <SheetClose />
                     </SheetContent>
