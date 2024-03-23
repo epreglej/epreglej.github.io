@@ -1,37 +1,35 @@
 <script setup>
+const route = useRoute();
 const open = ref(true);
 </script>
 
 <template>
     <div>
-        <!-- <div
-            class="z-50 flex items-center justify-between w-full h-screen p-4 lg:w-[250px] lg:flex-col lg:border-r"
-        >
-            <Icon
-                class="lg:hidden z-50 cursor-pointer left-2 top-2"
-                size="30"
-                name="iconamoon:menu-burger-horizontal"
-                @click="open = true"
-            />
-            <div
-                v-if="open"
-                class="fixed bg-white top-0 left-0 z-[50] w-full h-full h-screen lg:hidden"
-            >
-                <Icon
-                    class="absolute z-50 cursor-pointer right-4 top-4"
-                    size="30"
-                    name="material-symbols:close"
-                    @click="open = false"
-                />
-                <SidebarMenu />
+        <header class="flex h-[48px] pb-8 lg:hidden">
+            <div class="w-full flex pl-4">
+                <span class="text-[32px] font-bold">{{
+                    route.meta.title
+                }}</span>
             </div>
-        </div> -->
-
-        <!-- <div
-            class="hidden lg:flex w-[250px] h-screen flex flex-col justify-between border-r"
-        >
+            <div>
+                <Sheet>
+                    <SheetTrigger as-child>
+                        <div class="lg:hidden">
+                            <Icon
+                                class="w-[48px] h-[48px] p-1"
+                                name="radix-icons:hamburger-menu"
+                            />
+                        </div>
+                    </SheetTrigger>
+                    <SheetContent class="w-[300px] p-0">
+                        <SidebarMenu />
+                        <SheetClose />
+                    </SheetContent>
+                </Sheet>
+            </div>
+        </header>
+        <div class="hidden lg:flex lg:flex-col">
             <SidebarMenu />
-        </div> -->
-        <SidebarMenu />
+        </div>
     </div>
 </template>

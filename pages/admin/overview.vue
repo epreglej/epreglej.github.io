@@ -1,5 +1,6 @@
 <script setup>
 definePageMeta({
+    title: "Overview",
     layout: "sidebar-layout",
 });
 
@@ -8,7 +9,7 @@ const loading = ref(false);
 
 <template>
     <div
-        class="flex flex-col w-screen px-4 lg:bg-gradient-to-r lg:from-white lg:to-blue-400"
+        class="flex flex-col w-full px-4 lg:bg-gradient-to-r lg:from-white lg:to-blue-400"
     >
         <div class="h-[64px] pb-4">
             <span class="hidden text-[32px] lg:flex">Overview</span>

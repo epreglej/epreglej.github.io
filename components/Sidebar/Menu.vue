@@ -3,17 +3,17 @@ const user = useSupabaseUser();
 const items = ref([
     {
         title: "Overview",
-        path: "/overview",
+        path: "/admin/overview",
         icon: "ri:dashboard-line",
     },
     {
-        title: "Applications",
-        path: "/applications",
+        title: "App management",
+        path: "/admin/app-management",
         icon: "ri:database-2-line",
     },
     {
-        title: "User managment",
-        path: "/managment",
+        title: "User management",
+        path: "/user-management",
         icon: "ri:user-settings-line",
     },
 ]);
