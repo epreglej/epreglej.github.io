@@ -3,17 +3,16 @@
 <template>
     <div class="flex-col lg:hidden">
         <Header />
-        <hr class="w-full border-1 border-opacity-10 border-black" />
-        <div class="flex size-full">
-            <slot />
-        </div>
+        <Separator />
+        <slot />
     </div>
 
-    <div class="hidden lg:flex lg:h-screen bg-slate-200">
-        <div class="min-w-[220px]">
+    <div class="hidden lg:flex bg-slate-100">
+        <aside class="h-screen sticky top-0 flex-col min-w-[220px] w-[220px]">
             <Sidebar />
-        </div>
-        <div class="flex flex-col size-full">
+        </aside>
+
+        <div class="flex flex-col flex-grow">
             <Header />
             <slot />
         </div>

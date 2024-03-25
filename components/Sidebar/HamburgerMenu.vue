@@ -12,8 +12,12 @@ const route = useRoute();
                 />
             </div>
         </SheetTrigger>
-        <SheetContent class="w-[300px] p-0">
+        <SheetContent class="w-[300px] px-2 py-0">
+            <SidebarHeader />
+            <Separator />
             <SidebarContent />
+            <Separator />
+            <SidebarFooter />
             <SheetClose />
         </SheetContent>
     </Sheet>

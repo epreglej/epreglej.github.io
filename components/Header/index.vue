@@ -6,7 +6,7 @@ const pageTitleStore = usePageTitleStore();
 
 <template>
     <header class="flex w-full h-[48px]">
-        <div class="w-full flex pl-4">
+        <div class="flex w-full px-4">
             <span class="text-[32px] font-bold">{{
                 pageTitleStore.title
             }}</span>

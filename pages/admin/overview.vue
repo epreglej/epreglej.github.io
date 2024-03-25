@@ -10,7 +10,9 @@ const loading = ref(false);
 </script>
 
 <template>
-    <div class="lg:flex-grow lg:bg-gradient-to-r lg:from-white lg:to-blue-400">
+    <div
+        class="lg:flex-grow lg:bg-gradient-to-r lg:from-white lg:to-blue-400 py-2"
+    >
         <div class="text-5xl">Hello from overview.vue</div>
         <div class="text-5xl">Hello from overview.vue</div>
         <div class="text-5xl">Hello from overview.vue</div>

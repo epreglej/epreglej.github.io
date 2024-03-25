@@ -41,26 +41,18 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
             class="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
         />
         <DialogContent
-            class="flex"
             :class="cn(sheetVariants({ side }), props.class)"
             v-bind="{ ...forwarded, ...$attrs }"
         >
-            <div class="flex-grow">
+            <div class="h-1/2">
                 <slot />
             </div>
 
-            <div
-                class="w-[48px] h-[48px] justify-bottom place-items-center flex pt-1"
+            <DialogClose
+                class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
             >
-                <DialogClose
-                    class="m-auto rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
-                >
-                    <Icon
-                        class="w-[24px] h-[24px]"
-                        name="radix-icons:cross-1"
-                    />
-                </DialogClose>
-            </div>
+                <X class="w-6 h-6 text-muted-foreground" />
+            </DialogClose>
         </DialogContent>
     </DialogPortal>
 </template>
