@@ -4,9 +4,17 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/supabase",
-    "@pinia/nuxt",
     "@vueuse/nuxt",
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: ["defineStore", "acceptHMRUpdate"],
+      },
+    ],
   ],
+  imports: {
+    dirs: ["store"],
+  },
   shadcn: {
     prefix: "",
     componentDir: "./components/ui",

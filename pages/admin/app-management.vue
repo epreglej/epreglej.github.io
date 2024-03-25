@@ -1,8 +1,10 @@
 <script setup>
 definePageMeta({
-    title: "App management",
     layout: "sidebar-layout",
 });
+
+const pageTitleStore = usePageTitleStore();
+pageTitleStore.setTitle("App management");
 
 const loading = ref(false);
 </script>

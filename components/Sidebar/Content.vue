@@ -1,16 +1,8 @@
 <script setup>
 const user = useSupabaseUser();
 const items = ref([
-    {
-        title: "Overview",
-        path: "/admin/overview",
-        icon: "ri:dashboard-line",
-    },
-    {
-        title: "App management",
-        path: "/admin/app-management",
-        icon: "ri:database-2-line",
-    },
+    overviewMenuItem(),
+    appManagementMenuItem(),
     {
         title: "User management",
         path: "/user-management",
@@ -21,11 +13,11 @@ const items = ref([
 
 <template>
     <header
-        class="flex items-center gap-2 pb-4 px-4 hover:scale-[101%] transition cursor-pointer"
+        class="flex w-full items-center gap-2 pb-4 px-4 hover:scale-[101%] transition cursor-pointer"
     >
         <p class="text-[32px] font-bold">comfy.vr</p>
     </header>
-    <div class="px-2 grow">
+    <div class="px-2 h-full w-full">
         <div class="grid gap-2">
             <NuxtLink
                 :to="item.path"
@@ -38,9 +30,9 @@ const items = ref([
             </NuxtLink>
         </div>
     </div>
-    <footer class="py-2">
+    <footer class="py-2 w-full">
         <hr class="pb-2" />
-        <div class="px-2 grow">
+        <div class="px-2">
             <div class="grid gap-2">
                 <NuxtLink
                     v-if="user"
