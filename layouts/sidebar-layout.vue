@@ -3,7 +3,6 @@
 <template>
     <div class="flex-col lg:hidden">
         <Header />
-        <Separator />
         <slot />
     </div>
 
