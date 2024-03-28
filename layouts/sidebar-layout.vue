@@ -7,7 +7,7 @@
     </div>
 
     <div class="hidden lg:flex bg-slate-100">
-        <aside class="h-screen sticky top-0 flex-col min-w-[220px] w-[220px]">
+        <aside class="h-screen sticky top-0 flex-col min-w-[230px] w-[230px]">
             <Sidebar />
         </aside>
 

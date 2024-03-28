@@ -2,4 +2,8 @@
 const loading = ref(false);
 </script>
 
-<template>Hi from index.vue!</template>
+<template>
+  <div>
+    Hi from index.vue!
+  </div>
+ </template>
