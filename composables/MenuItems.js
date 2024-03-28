@@ -29,7 +29,7 @@ export const appManagementMenuItem = () => {
 export const userManagementMenuItem = () => {
   return {
     title: "User management",
-    path: "/user-management",
+    path: "/admin/user-management",
     icon: "ri:user-settings-line",
   };
 };

@@ -23,13 +23,13 @@ const delegatedProps = computed(() => {
       v-bind="delegatedProps"
       :class="
         cn(
-          'flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180',
+          'flex flex-1 rounded items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180',
           props.class,
         )
       "
     >
       <slot />
-      <slot name="icon" class="">
+      <slot name="icon">
         <ChevronDown
           class="absolute right-3 h-4 w-4 shrink-0 transition-transform duration-200"
         />

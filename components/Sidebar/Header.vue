@@ -1,7 +1,5 @@
 <template>
-    <header
-        class="flex items-center px-2 hover:scale-[101%] transition cursor-pointer"
-    >
-        <p class="text-[32px] font-bold">comfy.vr</p>
-    </header>
+    <span class="items-center px-2 text-[32px] font-bold py-0">
+        comfy.vr
+    </span>
 </template>
