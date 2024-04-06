@@ -13,16 +13,15 @@
             <div>share</div>
         </a>
     </nav> -->
-
-    <header class="s">
+    <header class="s transparent">
         <nav>
             <!-- <NavigationDrawer /> -->
             <button class="transparent circle large s">
-                <i>arrow_back</i>
+                <i>home</i>
             </button>
-            <h5 class="max left-align">Dashboard</h5>
+            <h6 class="max left-align">Dashboard</h6>
             <button class="transparent circle large">
-                <i class="large">logout</i>
+                <i class="">logout</i>
             </button>
         </nav>
     </header>

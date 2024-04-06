@@ -19,4 +19,5 @@ export default defineNuxtConfig({
       ],
     },
   },
+  css: ["~/assets/css/additions.css"],
 });
