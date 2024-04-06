@@ -28,7 +28,7 @@ definePageMeta({
                     <td>
                         <button class="responsive small-elevate vertical">
                             <i>home</i>
-                            <span>Button</span>
+                            <span>Button!</span>
                         </button>
                     </td>
                 </tr>
