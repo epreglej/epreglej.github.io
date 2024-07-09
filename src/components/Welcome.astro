@@ -1,0 +1,20 @@
+<dialog id="welcome-dialog" class="max active">
+    <h5>Fullscreen</h5>
+    <div>Some text here</div>
+    <nav class="right-align">
+        <button class="border">Cancel</button>
+        <button>Confirm</button>
+    </nav>
+</dialog>
+
+<script>
+    var timeline = anime.timeline();
+
+    timeline.add({
+        targets: "#welcome-dialog",
+        opacity: [1, 0],
+        easing: "easeOutCirc",
+        duration: 500,
+        delay: 800,
+    });
+</script>

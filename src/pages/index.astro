@@ -1,5 +1,5 @@
 ---
-
+import Welcome from "@components/Welcome.astro";
 ---
 
 <html lang="en">
@@ -9,8 +9,28 @@
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/beercss@3.6.8/dist/cdn/beer.min.css"
+            rel="stylesheet"
+        />
+        <script
+            type="module"
+            src="https://cdn.jsdelivr.net/npm/beercss@3.6.8/dist/cdn/beer.min.js"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+            integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
     </head>
     <body>
-        <h1>ePreglej</h1>
+        <Welcome />
+
+        <main class="responsive middle-align">
+            <h1 id="header" class="">ePreglej</h1>
+        </main>
     </body>
 </html>
+
+<script></script>
